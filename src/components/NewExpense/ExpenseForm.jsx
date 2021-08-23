@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import "./ExpenseForm.css";
 import { ExpenseFields } from "./ExpenseFields";
 import { ExpenseActions } from "./ExpenseActions";
 
@@ -39,7 +38,7 @@ export const ExpenseForm = ({ onSave }) => {
     event.preventDefault();
     const expenseData = {
       title: title,
-      amount: amount,
+      amount: +amount,
       date: new Date(date),
     };
     onSave(expenseData);
